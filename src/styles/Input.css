@@ -1,0 +1,8 @@
+.container > input {
+  width: 40vw;
+  height: 20px;
+}
+
+.container >  button {
+  height: 25px
+}
