@@ -5,6 +5,9 @@ import Form from "./components/Form";
 import Reminders from "./components/Reminders";
 
 function App() {
+
+  const [reminders, setReminders] = React.useState([]);
+  
   return (
     <div className="App">
       <div id="container">
