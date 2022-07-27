@@ -7,11 +7,20 @@ import { listContext } from '../App'
 export default function () {
 
   const {list} = useContext(listContext);
+  const {setList} = useContext(listContext);
+
+  const[input, setInput] = useState("");
+
+  function handleClick() {
+    setList([...list, input]);
+    setInput("");
+    console.log(list)
+  }
 
   return (
     <div className='container'>
-      <input type="text" placeholder='Water Your Dog'></input>
-      <button onClick={() => console.log(list)}>Add</button>
+      <input type="text" placeholder='Water Your Dog' value={input} onChange={e => setInput(e.target.value)}></input>
+      <button onClick={handleClick}>Add</button>
     </div>
   )
 }
