@@ -13,9 +13,13 @@ function App() {
   return (
     <listContext.Provider value={{list, setList}}>
       <div className="App">
-        <h1>To-Do List</h1>
-        <Input></Input>
-        <ItemsList item={list}></ItemsList>
+        <div className="input">
+          <h1>To-Do List</h1>
+          <Input></Input>
+        </div>
+        <div className="table">
+          <ItemsList item={list}></ItemsList>
+        </div>
       </div>
     </listContext.Provider>
   );
