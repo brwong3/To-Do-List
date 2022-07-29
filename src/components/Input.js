@@ -11,8 +11,18 @@ export default function () {
 
   const[input, setInput] = useState("");
 
+  function checkDuplicate(input) {
+    for(let i = 0; i< list.length; i++) {
+      if(list[i].toLowerCase() === input.toLowerCase()) {
+        return true;
+      }
+    }
+    return false;
+
+  }
+
   function handleClick() {
-    if(input != "") {
+    if(input != "" && !checkDuplicate(input)) {
       setList([...list, input]);
       setInput("");
       console.log(list)
