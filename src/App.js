@@ -17,7 +17,7 @@ function App() {
         <div className="input">
           <motion.div transition={{duration: 0.5, ease: "easeIn"}} animate={{ scale:1.5}} className="title">To-Do List</motion.div>
           <motion.div transition={{duration: 1, ease: "easeIn"}} animate={{ scale:1.2, rotate: 720}} className="subtitle">Click to Delete</motion.div>
-          <motion.div animate={{x: [-100, 0]}} transition={{duration: 0.5, ease: "easeIn"}}><Input></Input></motion.div>
+          <motion.div animate={{x: [-200, 0]}} transition={{duration: 0.5, ease: "easeIn"}}><Input></Input></motion.div>
         </div>
         <div className="table">
           <ItemsList item={list}></ItemsList>
