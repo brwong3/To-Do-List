@@ -12,9 +12,11 @@ export default function () {
   const[input, setInput] = useState("");
 
   function handleClick() {
-    setList([...list, input]);
-    setInput("");
-    console.log(list)
+    if(input != "") {
+      setList([...list, input]);
+      setInput("");
+      console.log(list)
+    }
   }
 
   return (
