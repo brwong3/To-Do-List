@@ -19,7 +19,11 @@ export default function () {
 
   return (
     <div className='container'>
-      <input type="text" placeholder='Water Your Dog' value={input} onChange={e => setInput(e.target.value)}></input>
+      <input onKeyDown={(e) => {
+        if(e.key === "Enter") {
+          handleClick()
+        }
+      }} type="text" placeholder='Water Your Dog' value={input} onChange={e => setInput(e.target.value)}></input>
       <button onClick={handleClick}>Add</button>
     </div>
   )
