@@ -1,11 +1,24 @@
-import React from 'react'
+import { MotionConfig } from 'framer-motion'
+import React, {useContext} from 'react'
 import "../styles/ItemsList.css"
+import { motion } from "framer-motion"
+import { listContext } from '../App'
+ 
 
 export default function ItemsList(props) {
-  const table = props.item.map((item) => <h1 className="box">{item}</h1>)
+
+  const {list} = useContext(listContext);
+  const {setList} = useContext(listContext);
+
+  function whileClick(item) {
+    setList(list.filter(list => list !== item))
+  }
+  
+
+  const table = props.item.map((item) => <button onClick={()=> whileClick(item)}className="box">{item}</button>)
   
   return(
-    <div>
+    <div className='tableContainer'>
       {table}
     </div>
   )
