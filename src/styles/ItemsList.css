@@ -1,6 +1,6 @@
 .box {
   width: 50vw;
-  height: 5vh;
   background-color: white;
   text-align: center;
+  overflow: hidden;
 }
